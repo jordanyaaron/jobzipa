@@ -71,7 +71,7 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
       </div>
 
       {/* Navigation */}
-      <nav className="space-y-2 pt-2">
+      <nav className="space-y-2 pt-2 height-[cal(100vh-200px)]">
         {navLinks.map((link) => {
           const Icon = link.icon;
           const isActive = pathname === link.href;
@@ -96,29 +96,27 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
           );
         })}
       </nav>
-      <div className="mt-auto border-t pt-3">
-  <button
-    className="
-      relative w-full mx-30px flex items-center justify-between
-      px-4 py-3 rounded-xl
-      bg-gradient-to-r from-zinc-900 to-zinc-700
-      text-white shadow-md
-      transition-all duration-300
-      hover:scale-[1.02] hover:shadow-lg
-      active:scale-95
-      overflow-hidden
-    "
-  >
-    <span className="flex items-center gap-3">
-      <span className="text-xl">🌙</span>
-      <span className="font-medium">Theme</span>
-    </span>
+      <button
+        className="
+          relative w-full mx-30px flex items-center justify-between
+          px-4 py-3 rounded-xl
+          bg-gradient-to-r from-zinc-900 to-zinc-700
+          text-white shadow-md
+          transition-all duration-300
+          hover:scale-[1.02] hover:shadow-lg
+          active:scale-95
+          overflow-hidden
+        "
+      >
+        <span className="flex items-center gap-3">
+          <span className="text-xl">🌙</span>
+          <span className="font-medium">Theme</span>
+        </span>
 
-    <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-      Switch
-    </span>
-  </button>
-</div>
+        <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+          Switch
+        </span>
+      </button>
     </aside>
   );
 };
