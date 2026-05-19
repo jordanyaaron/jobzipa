@@ -6,7 +6,7 @@ type HeaderProps = {
 
 export default function Header({ toggleDrawer }: HeaderProps) {
   return (
-    <header className="h-14 border-b flex items-center px-4">
+    <header className="h-16 border-b flex items-center px-4">
       
       <h1 className="text-2xl font-bold text-black ml-2">
         JobZipa
