@@ -12,15 +12,11 @@ import {
   InformationCircleIcon,
 } from "@heroicons/react/24/outline";
 
-import Image from "next/image";
-
 interface SidebarProps {
-  toggleDrawer: () => void;
+  toggleDrawer?: () => void;
 }
 
-const Sidebar = ({
-  toggleDrawer,
-}: SidebarProps) => {
+const Sidebar = ({ toggleDrawer }: SidebarProps) => {
   const pathname = usePathname();
 
   const navLinks = [
@@ -51,18 +47,25 @@ const Sidebar = ({
     },
   ];
 
+  const handleClick = () => {
+    // only close drawer if function exists (mobile only)
+    if (toggleDrawer) toggleDrawer();
+  };
+
   return (
     <aside className="h-full w-64 p-4">
       {/* Header */}
       <div className="flex h-12 items-center border-b border-[var(--border)] pb-[10px] pl-2">
-        <button
-          onClick={toggleDrawer}
-          className="rounded-lg bg-[var(--hover)] p-2 hover:bg-[var(--hover)] lg:hidden"
-        >
-          <XMarkIcon className="h-6 w-6 text-[var(--text)]" />
-        </button>
+        {toggleDrawer && (
+          <button
+            onClick={handleClick}
+            className="rounded-lg bg-[var(--hover)] p-2 hover:bg-[var(--hover)] lg:hidden"
+          >
+            <XMarkIcon className="h-6 w-6 text-[var(--text)]" />
+          </button>
+        )}
 
-        <h1 className="text-2xl font-bold text-black">
+        <h1 className="text-2xl font-bold text-black ml-2">
           JobZipa
         </h1>
       </div>
@@ -71,14 +74,13 @@ const Sidebar = ({
       <nav className="space-y-2 pt-2">
         {navLinks.map((link) => {
           const Icon = link.icon;
-
           const isActive = pathname === link.href;
 
           return (
             <Link
               key={link.name}
               href={link.href}
-              onClick={toggleDrawer}
+              onClick={handleClick}
               className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 transition ${
                 isActive
                   ? "bg-[var(--hover)] font-medium"
