@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/header/Home";
-import Sidebar from "@/components/sidebars/Sidebar";
+import Sidebar from "@/components/sidebars/Home";
 import { useDrawer } from "@/components/providers/DrawerProvider";
 
 export default function AppShell({
