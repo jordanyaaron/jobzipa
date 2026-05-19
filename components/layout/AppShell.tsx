@@ -1,6 +1,6 @@
 "use client";
 
-import Header from "@/components/headers/Home";
+import Header from "@/components/headers/Header";
 import { useDrawer } from "@/components/providers/DrawerProvider";
 import Sidebar from '@/components/sidebars/Sidebar';
 
