@@ -6,12 +6,14 @@ type HeaderProps = {
 
 export default function Header({ toggleDrawer }: HeaderProps) {
   return (
-    <header className="h-14 border-b flex items-center px-4">
-      <button onClick={toggleDrawer}>
+    <header className="h-16 border-b flex items-center px-4">
+      <button className="text-2xl ml-2" onClick={toggleDrawer}>
         ☰
       </button>
 
-      <h1 className="ml-3 font-bold">JobZipa</h1>
+      <h1 className="text-2xl font-bold text-black ml-2">
+          JobZipa
+        </h1>
     </header>
   );
 }
