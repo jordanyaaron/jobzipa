@@ -71,7 +71,7 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
       </div>
 
       {/* Navigation */}
-      <nav className="space-y-2 pt-2 h-[cal(100vh-200px)]">
+      <nav className="space-y-2 pt-2 h-[calc(100vh-200px)]">
         {navLinks.map((link) => {
           const Icon = link.icon;
           const isActive = pathname === link.href;
