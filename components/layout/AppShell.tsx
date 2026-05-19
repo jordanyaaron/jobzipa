@@ -2,7 +2,7 @@
 
 import Header from "@/components/headers/Home";
 import { useDrawer } from "@/components/providers/DrawerProvider";
-import Sidebar from '@/components/sidebars/Home';
+import Sidebar from '@/components/sidebars/Sidebar';
 
 export default function AppShell({
   children,
