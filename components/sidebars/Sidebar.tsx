@@ -13,7 +13,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
-import JobzipaLogo from "../../assets/logos/jobzipa.png";
 
 interface SidebarProps {
   toggleDrawer: () => void;
@@ -63,12 +62,9 @@ const Sidebar = ({
           <XMarkIcon className="h-6 w-6 text-[var(--text)]" />
         </button>
 
-        <Image
-          src={JobzipaLogo}
-          className="ml-[10px] h-9 w-auto"
-          alt="App logo"
-          priority
-        />
+        <h1 className="text-2xl font-bold text-black">
+          JobZipa
+        </h1>
       </div>
 
       {/* Navigation */}
