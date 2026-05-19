@@ -66,7 +66,7 @@ const Sidebar = ({
         <Image
           src={JobzipaLogo}
           className="ml-[10px] h-9 w-auto"
-          alt="Jobzipa logo"
+          alt="App logo"
           priority
         />
       </div>
