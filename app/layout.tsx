@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/headers/home";
+import { DrawerProvider } from "@/components/providers/DrawerProvider";
+import AppShell from "@/components/layout/AppShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,19 +19,19 @@ export const metadata: Metadata = {
   description: "Discover your next career opportunity with JobZipa. Explore thousands of job listings, connect with top companies, and take the next step in your professional journey.",
 };
 
+
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
+    <html lang="en">
+      <body>
+        <DrawerProvider>
+          <AppShell>{children}</AppShell>
+        </DrawerProvider>
       </body>
     </html>
   );
