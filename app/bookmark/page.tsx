@@ -27,34 +27,7 @@ const SavedJobsPage = () => {
             >
                 <h1 className="text-xl text-[var(--text)] font-bold mb-4">Saved Jobs</h1>
                 <div className="flex flex-col gap-3">
-                {jobs.map((job) => (
-                    <div
-                    key={job.public_id}
-                    className="flex items-center justify-between p-3 border-b border-[var(--border)] "
-                    >
-                    {/* LEFT */}
-                    <Link to={`/jobs/${job.public_id}`} className="flex gap-3">
-                        <img
-                        src={job.company_logo}
-                        alt=""
-                        className="w-10 h-10 rounded-md object-cover"
-                        />
-
-                        <div>
-                        <p className="font-semibold text-[var(--text)] ">{job.title}</p>
-                        <p className="text-sm text-gray-500">{job.company}</p>
-                        </div>
-                    </Link>
-
-                    {/* ACTION */}
-                    <button
-                        onClick={() => removeJob(job)}
-                        className="p-2 rounded-full hover:bg-gray-100"
-                    >
-                        <BookmarkIcon className="h-5 w-5text-[var(--text)] fill-[var(--text)]" />
-                    </button>
-                    </div>
-                ))}
+                    <h1>hapa ndipo save job zitakaa</h1>
                 </div>
             </main>
       }
