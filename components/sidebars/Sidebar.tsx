@@ -27,10 +27,12 @@ const Sidebar = ({ closeDrawer }: SidebarProps) => {
   ];
 
   const handleNavigate = (href: string) => {
-    closeDrawer?.();     // 1. funga sidebar kwanza
-    router.push(href);   // 2. kisha navigate
-  };
+    closeDrawer?.();
 
+    setTimeout(() => {
+      router.push(href);
+    }, 50);
+  };
   return (
     <aside className="h-full w-64 p-4 flex flex-col">
       
