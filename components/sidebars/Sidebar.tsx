@@ -97,7 +97,7 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
       </nav>
       <div
           className="
-            absolute w-full bottom-10 h-auto
+            absolute w-full lg:w-60  bottom-10 h-auto
           "
       >
          <button
