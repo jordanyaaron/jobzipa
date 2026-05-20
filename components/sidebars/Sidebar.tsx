@@ -15,7 +15,7 @@ interface SidebarProps {
   closeDrawer?: () => void;
 }
 
-const Sidebar = ({ toggleDrawer }: SidebarProps) => {
+const Sidebar = ({ closeDrawer }: SidebarProps) => {
   const pathname = usePathname();
 
   const navLinks = [
