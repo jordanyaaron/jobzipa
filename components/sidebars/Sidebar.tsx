@@ -54,7 +54,7 @@ const Sidebar = ({ closeDrawer }: SidebarProps) => {
       <div className="flex h-12 items-center border-b border-[var(--border)] pb-[10px] pl-2">
         {closeDrawer && (
           <button
-            onClick={closeDrawer}
+            onClick={!closeDrawer}
             className="rounded-lg bg-[var(--hover)] p-2 hover:bg-[var(--hover)] lg:hidden"
           >
             <XMarkIcon className="h-6 w-6 text-[var(--text)]" />
@@ -76,7 +76,7 @@ const Sidebar = ({ closeDrawer }: SidebarProps) => {
             <Link
               key={link.name}
               href={link.href}
-              onClick={closeDrawer}
+              onClick={!closeDrawer}
               className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 transition ${
                 isActive
                   ? "bg-[var(--hover)] font-medium"
