@@ -12,12 +12,7 @@ type HeaderProps = {
 export default function Header({ toggleDrawer }: HeaderProps) {
   const [query, setQuery] = useState("");
 
-  
 
-  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  
   return (
     <header className="h-16 border-b flex lg:fixed top-0 left-0 right-0 bg-white items-center px-4">
       
