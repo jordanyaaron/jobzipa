@@ -69,8 +69,8 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
         </h1>
       </div>
 
-      {/* Navigation */}
-      <nav className="space-y-2 pt-2 h-[calc(100vh-200px)]">
+      {/* Navigation h-[calc(100vh-200px)]*/}
+      <nav className="space-y-2 pt-2 ">
         {navLinks.map((link) => {
           const Icon = link.icon;
           const isActive = pathname === link.href;
@@ -95,6 +95,7 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
           );
         })}
       </nav>
+      <div className="flex-1" />
       <button
         className="
           relative w-full mx-30px flex items-center justify-between
