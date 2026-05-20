@@ -72,7 +72,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
                 <input
                     type="text"
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search jobs..."
                     className="flex-1 px-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--main-bg)] text-[var(--text)] focus:outline-none"
                     autoFocus
