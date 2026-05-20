@@ -16,7 +16,7 @@ export default function AppShell({
 
       {/* Sidebar (desktop) */}
       <div className="hidden lg:block w-64 border-r">
-        <Sidebar />
+        <Sidebar  toggleDrawer={toggleDrawer}  />
       </div>
 
       {/* Mobile sidebar */}
