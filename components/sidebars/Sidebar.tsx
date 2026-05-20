@@ -95,28 +95,33 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
           );
         })}
       </nav>
-      <div className="flex-1" />
-      <button
-        className="
-          relative w-full mx-30px flex items-center justify-between
-          px-4 py-3 rounded-xl
-          bg-gradient-to-r from-zinc-900 to-zinc-700
-          text-white shadow-md
-          transition-all duration-300
-          hover:scale-[1.02] hover:shadow-lg
-          active:scale-95
-          overflow-hidden
-        "
+      <div
+          className="
+            absolute w-full bottom-10 h-auto
+          "
       >
-        <span className="flex items-center gap-3">
-          <span className="text-xl">🌙</span>
-          <span className="font-medium">Theme</span>
-        </span>
-
-        <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-          Switch
-        </span>
-      </button>
+         <button
+            className="
+              relative w-full mx-30px flex items-center justify-between
+              px-4 py-3 rounded-xl
+              bg-gradient-to-r from-zinc-900 to-zinc-700
+              text-white shadow-md
+              transition-all duration-300
+              hover:scale-[1.02] hover:shadow-lg
+              active:scale-95
+              overflow-hidden
+            "
+          >
+            <span className="flex items-center gap-3">
+              <span className="text-xl">🌙</span>
+              <span className="font-medium">Theme</span>
+            </span>
+            <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+              Switch
+            </span>
+          </button>
+      </div>
+          
     </aside>
   );
 };
