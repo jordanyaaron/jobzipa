@@ -25,9 +25,9 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
       href: "/",
     },
     {
-      name: "Bookmark",
+      name: "Bookmarked",
       icon: BookmarkIcon,
-      href: "/bookmarked",
+      href: "/bookmark",
     },
     {
       name: "FAQ",
