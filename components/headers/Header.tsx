@@ -25,7 +25,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
       {/* spacer pushes button to right */}
       <div className="lg:hidden  flex-1" />
-      <div className="hidden md:flex flex-1 mx-6">
+      <div className="hidden lg:flex flex-1 mx-6">
         <div className="relative hidden md:flex flex-1 ">
           <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-[var(--placeholder)] opacity-60" />
           <input
