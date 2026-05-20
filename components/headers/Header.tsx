@@ -11,9 +11,6 @@ type HeaderProps = {
 
 export default function Header({ toggleDrawer }: HeaderProps) {
   const [query, setQuery] = useState("");
-  const navigate = useNavigate();
-  const location = useLocation();
-  const path = location.pathname;
 
   const handleSearch = (e) => {
     if (e.key === "Enter" && query.trim()) {
