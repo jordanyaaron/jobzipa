@@ -60,6 +60,25 @@ export default function Header({ toggleDrawer }: HeaderProps) {
       >
         ☰
       </button>
+      {mobileSearchOpen && (
+                <div className="fixed top-0 left-0 w-full h-16 z-50 flex items-center px-4 bg-[var(--background)] border-b border-[var(--border)]">
+                
+                <button
+                    onClick={() => setMobileSearchOpen(false)}
+                    className="mr-3 p-2 rounded-lg hover:bg-[var(--hover)]"
+                >
+                    <ArrowLeftIcon className="h-6 w-6 text-[var(--text)]" />
+                </button>
+
+                <input
+                    type="text"
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search jobs..."
+                    className="flex-1 px-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--main-bg)] text-[var(--text)] focus:outline-none"
+                    autoFocus
+                />
+                </div>
+            )}
     </header>
   );
 }
