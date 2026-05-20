@@ -102,7 +102,7 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
       >
          <button
             className="
-              relative w-full mx-30px flex items-center justify-between
+              relative w-[calc(100%-100px)] mx-30px flex items-center justify-between
               px-4 py-3 rounded-xl
               bg-gradient-to-r from-zinc-900 to-zinc-700
               text-white shadow-md
