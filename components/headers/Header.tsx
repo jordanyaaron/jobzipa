@@ -21,17 +21,18 @@ export default function Header({ toggleDrawer }: HeaderProps) {
       </h1>
 
       {/* spacer pushes button to right */}
-      {/* <div className="hidden md:flex flex-1 mx-6"> */}
-      <div className="relative hidden md:flex flex-1 ">
-        <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-[var(--placeholder)] opacity-60" />
-        <input
-          type="text"
-          placeholder="Search jobs..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          // onKeyDown={handleSearch}
-          className="w-full text-[var(--placeholder)] pl-10 pr-4 py-2 rounded-lg border border-[var(--border)] focus:outline-none text-[var(--text)] placeholder:text-[var(--placeholder)]"
-        />
+      <div className="hidden md:flex flex-1 mx-6">
+        <div className="relative hidden md:flex flex-1 ">
+          <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-[var(--placeholder)] opacity-60" />
+          <input
+            type="text"
+            placeholder="Search jobs..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            // onKeyDown={handleSearch}
+            className="w-full text-[var(--placeholder)] pl-10 pr-4 py-2 rounded-lg border border-[var(--border)] focus:outline-none text-[var(--text)] placeholder:text-[var(--placeholder)]"
+          />
+        </div>
       </div>
 
       {/* Drawer button RIGHT SIDE */}
