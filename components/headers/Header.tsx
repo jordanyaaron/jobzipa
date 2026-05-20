@@ -1,7 +1,9 @@
 "use client";
 
 import {
-  MagnifyingGlassIcon
+  MagnifyingGlassIcon,
+  MagnifyingGlassIcon ,
+  FunnelIcon 
 } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
 
@@ -11,6 +13,8 @@ type HeaderProps = {
 
 export default function Header({ toggleDrawer }: HeaderProps) {
   const [query, setQuery] = useState("");
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
 
   return (
@@ -35,6 +39,20 @@ export default function Header({ toggleDrawer }: HeaderProps) {
           />
         </div>
       </div>
+
+      <button
+          onClick={() => setMobileSearchOpen(true)}
+          className="lg:hidden p-2 rounded-lg hover:bg-[var(--hover)]  text-[var(--text)]"
+      >
+          <MagnifyingGlassIcon className="h-6 w-6   text-[var(--text)]" />
+      </button>
+
+      <button
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        className="p-2 rounded-lg hover:bg-[var(--hover)]"
+        >
+        <FunnelIcon className="h-6 w-6 text-[var(--text)]" />
+      </button>
 
       {/* Drawer button RIGHT SIDE */}
       <button
