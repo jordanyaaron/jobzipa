@@ -16,7 +16,7 @@ export function DrawerProvider({
   };
 
   const closeDrawer = () => {
-    setOpen(false);
+    setOpen(true);
   };
 
   return (
