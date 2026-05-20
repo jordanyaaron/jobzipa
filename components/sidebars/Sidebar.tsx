@@ -79,7 +79,9 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
             <Link
               key={link.name}
               href={link.href}
-              onClick={handleClick}
+              onClick={() => {
+                if (toggleDrawer) toggleDrawer();
+              }}
               className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 transition ${
                 isActive
                   ? "bg-[var(--hover)] font-medium"
