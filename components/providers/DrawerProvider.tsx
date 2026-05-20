@@ -4,13 +4,29 @@ import { createContext, useContext, useState } from "react";
 
 const DrawerContext = createContext<any>(null);
 
-export function DrawerProvider({ children }: any) {
+export function DrawerProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [open, setOpen] = useState(false);
 
-  const toggleDrawer = () => setOpen((p) => !p);
+  const toggleDrawer = () => {
+    setOpen((prev: boolean) => !prev);
+  };
+
+  const closeDrawer = () => {
+    setOpen(false);
+  };
 
   return (
-    <DrawerContext.Provider value={{ open, toggleDrawer }}>
+    <DrawerContext.Provider
+      value={{
+        open,
+        toggleDrawer,
+        closeDrawer,
+      }}
+    >
       {children}
     </DrawerContext.Provider>
   );

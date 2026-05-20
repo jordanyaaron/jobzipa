@@ -12,7 +12,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 interface SidebarProps {
-  toggleDrawer?: () => void;
+  closeDrawer?: () => void;
 }
 
 const Sidebar = ({ toggleDrawer }: SidebarProps) => {
@@ -46,10 +46,7 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
     },
   ];
 
-  const handleClick = () => {
-    // only close drawer if function exists (mobile only)
-    if (toggleDrawer) toggleDrawer();
-  };
+  
 
   return (
     <aside className="h-full w-64 p-4">
@@ -79,9 +76,7 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
             <Link
               key={link.name}
               href={link.href}
-              onClick={() => {
-                if (toggleDrawer) toggleDrawer();
-              }}
+              onClick={closeDrawer}
               className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 transition ${
                 isActive
                   ? "bg-[var(--hover)] font-medium"
