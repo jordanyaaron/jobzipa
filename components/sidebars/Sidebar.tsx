@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import {
   BookmarkIcon,
   QuestionMarkCircleIcon,
@@ -17,6 +19,14 @@ interface SidebarProps {
 
 const Sidebar = ({ toggleDrawer }: SidebarProps) => {
   const pathname = usePathname();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   const navLinks = [
     {
@@ -101,6 +111,9 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
           "
       >
          <button
+            onClick={() =>
+              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }
             className="
               relative w-[calc(100%-30px)] mx-30px flex items-center justify-between
               px-4 py-3 rounded-xl
@@ -113,9 +126,15 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
             "
           >
             <span className="flex items-center gap-3">
-              <span className="text-xl">🌙</span>
-              <span className="font-medium">Theme</span>
+              <span className="text-lg">
+                {resolvedTheme === "dark" ? "☀️" : "🌙"}
+              </span>
+
+              <span className="font-medium">
+                {resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
+              </span>
             </span>
+
             <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
               Switch
             </span>

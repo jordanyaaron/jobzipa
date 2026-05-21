@@ -1,52 +1,63 @@
-"use client";
+import type { Metadata } from "next";
 
-import Header from "@/components/headers/Header";
-import { useDrawer } from "@/components/providers/DrawerProvider";
-import Sidebar from '@/components/sidebars/Sidebar';
+import {
+  Geist,
+  Geist_Mono,
+} from "next/font/google";
 
-export default function AppShell({
+import "./globals.css";
+
+import { DrawerProvider } from "@/components/providers/DrawerProvider";
+
+import ThemeProvider from "@/components/providers/ThemeProvider";
+
+import AppShell from "@/components/layout/AppShell";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "JobZipa - Find Your Dream Job",
+
+  description:
+    "Discover your next career opportunity with JobZipa. Explore thousands of job listings, connect with top companies, and take the next step in your professional journey.",
+};
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { open, toggleDrawer } = useDrawer();
-
   return (
-    <div className="flex h-screen">
-
-      {/* Sidebar (desktop) */}
-      <div className="hidden lg:block w-64 border-r">
-        <Sidebar/>
-      </div>
-
-      {/* Mobile sidebar */}
-      <div
-        className={`fixed inset-0 bg-black/40 lg:hidden ${
-          open ? "block" : "hidden"
-        }`}
-        onClick={toggleDrawer}
-      />
-
-      <div
-        className={`fixed left-0 top-0 h-full w-64 bg-white lg:hidden transition-transform ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
+      <body
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+        `}
       >
-        <Sidebar  toggleDrawer={toggleDrawer}   />
-      </div>
+        <ThemeProvider>
 
-      {/* Main area */}
-      <div className="flex flex-1 flex-col">
+          <DrawerProvider>
 
-        {/* Header */}
-        <Header toggleDrawer={toggleDrawer} />
+            <AppShell>
+              {children}
+            </AppShell>
 
-        {/* Page content (SERVER PAGES ZIPO HAPA) */}
-        <main className="flex-1 overflow-y-auto">
-          {children}
-        </main>
+          </DrawerProvider>
 
-      </div>
-    </div>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
