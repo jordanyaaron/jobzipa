@@ -5,7 +5,6 @@ import {
   Geist_Mono,
 } from "next/font/google";
 
-import "../globals.css";
 
 import { DrawerProvider } from "@/components/providers/DrawerProvider";
 
