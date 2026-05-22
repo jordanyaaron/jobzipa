@@ -17,7 +17,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
 
   return (
-    <header className="h-16 border-b border-theme lg:z-50 flex lg:fixed top-0 left-0 right-0 items-center px-4">
+    <header className="h-16 border-b bg-[var(--background)] border-theme lg:z-50 flex lg:fixed top-0 left-0 right-0 items-center px-4">
       
       <h1 className="text-2xl font-bold text-black ml-2">
         JobZipa
@@ -34,29 +34,29 @@ export default function Header({ toggleDrawer }: HeaderProps) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             // onKeyDown={handleSearch}
-            className="w-full text-[var(--placeholder)] pl-10 pr-4 py-2 rounded-lg border border-[var(--border)] focus:outline-none text-[var(--text)] placeholder:text-[var(--placeholder)]"
+            className="w-full text-[var(--placeholder)] border border-theme pl-10 pr-4 py-2 rounded-lg border border-[var(--border)] focus:outline-none text-[var(--text)] placeholder:text-[var(--placeholder)]"
           />
         </div>
       </div>
 
       <button
           onClick={() => setMobileSearchOpen(true)}
-          className="lg:hidden p-2 rounded-lg hover:bg-[var(--hover)]  text-[var(--text)]"
+          className="lg:hidden p-2 rounded-lg hover:bg-[var(--hover)]  text-main"
       >
-          <MagnifyingGlassIcon className="h-6 w-6   text-[var(--text)]" />
+          <MagnifyingGlassIcon className="h-6 w-6   text-main" />
       </button>
 
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className="p-2 rounded-lg hover:bg-[var(--hover)]"
         >
-        <FunnelIcon className="h-6 w-6 text-[var(--text)]" />
+        <FunnelIcon className="h-6 w-6 text-main" />
       </button>
 
       {/* Drawer button RIGHT SIDE */}
       <button
         onClick={toggleDrawer}
-        className="rounded-lg p-2 text-2xl  hover:bg-gray-100 lg:hidden"
+        className="rounded-lg p-2 text-2xl text-main  hover:bg-gray-100 lg:hidden"
       >
         ☰
       </button>
@@ -74,7 +74,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
                     type="text"
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search jobs..."
-                    className="flex-1 px-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--main-bg)] text-[var(--text)] focus:outline-none"
+                    className="flex-1 px-4 py-2 rounded-lg border  border-theme text-[var(--text)] focus:outline-none"
                     autoFocus
                 />
                 </div>
