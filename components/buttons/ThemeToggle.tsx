@@ -1,10 +1,58 @@
+// components/mode-toggle.tsx
+"use client"
+
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
+
+export function ModeToggle() {
+  
+
+  return (
+    <button 
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      className="p-2 bg-gray-200 dark:bg-gray-800 rounded-md"
+    >
+      Badili kwenda {resolvedTheme === "dark" ? "Mwanga" : "Giza"}
+    </button>
+  )
+}
+
+
 "use client";
 
 import { useTheme } from "next-themes";
 
 export default function ThemeToggle() {
-  const { resolvedTheme, setTheme } =
-    useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Sehemu hii inabadilisha rangi ya bar ya simu kila theme ikibadilika
+  useEffect(() => {
+    if (!mounted) return
+
+    // Chagua rangi kulingana na theme iliyo hai kwa sasa
+    // resolvedTheme inajua kama mfumo upo dark au light hata kama umeweka 'system'
+    const currentTheme = resolvedTheme || theme
+    const color = currentTheme === "dark" ? "#0b1220" : "#ffffff" // #0f172a ni slate-900 ya Tailwind
+
+    // Tafuta au tengeneza meta tag ya theme-color
+    let metaTag = document.querySelector('meta[name="theme-color"]')
+    
+    if (!metaTag) {
+      metaTag = document.createElement('meta')
+      metaTag.setAttribute('name', 'theme-color')
+      document.head.appendChild(metaTag)
+    }
+    
+    // Weka rangi mpya kwenye simu
+    metaTag.setAttribute('content', color)
+  }, [theme, resolvedTheme, mounted])
+
+  if (!mounted) return null
 
   return (
     <button
