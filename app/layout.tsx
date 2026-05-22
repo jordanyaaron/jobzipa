@@ -4,7 +4,7 @@ import "./globals.css";
 import ThemeMeta from "@/components/providers/ThemeMeta";
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#000",
 };
   
 import {
