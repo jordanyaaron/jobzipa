@@ -1,7 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata,
+  Viewport } from "next";
 import "./globals.css";
 import ThemeMeta from "@/components/providers/ThemeMeta";
 
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
   
 import {
   Geist,
