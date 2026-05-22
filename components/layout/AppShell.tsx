@@ -27,7 +27,7 @@ export default function AppShell({
         <aside
           className="
             hidden lg:block
-            fixed top-16 left-0 bottom-0
+            fixed top-0 left-0 bottom-0
             w-64
             border-r
           "
