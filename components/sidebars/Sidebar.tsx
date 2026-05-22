@@ -63,7 +63,6 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
 
   return (
     <aside className="h-full w-64 p-4">
-      {/* Header */}
       <div className="flex h-12 items-center border-b border-[var(--border)] pb-[10px] pl-2">
         {toggleDrawer && (
           <button

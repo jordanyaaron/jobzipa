@@ -1,62 +1,52 @@
-import type { Metadata } from "next";
+"use client";
 
-import {
-  Geist,
-  Geist_Mono,
-} from "next/font/google";
+import Header from "@/components/header/Header";
+import Sidebar from "@/components/sidebar/Sidebar";
+import { useDrawer } from "@/components/providers/DrawerProvider";
 
-
-import { DrawerProvider } from "@/components/providers/DrawerProvider";
-
-import ThemeProvider from "@/components/providers/ThemeProvider";
-
-import AppShell from "@/components/layout/AppShell";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "JobZipa - Find Your Dream Job",
-
-  description:
-    "Discover your next career opportunity with JobZipa. Explore thousands of job listings, connect with top companies, and take the next step in your professional journey.",
-};
-
-export default function RootLayout({
+export default function AppShell({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { open, toggleDrawer } = useDrawer();
+
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-    >
-      <body
-        className={`
-          ${geistSans.variable}
-          ${geistMono.variable}
-        `}
+    <div className="flex h-screen">
+
+      {/* Sidebar (desktop) */}
+      <div className="hidden lg:block w-64 border-r">
+        <Sidebar />
+      </div>
+
+      {/* Mobile sidebar */}
+      <div
+        className={`fixed inset-0 bg-black/40 lg:hidden ${
+          open ? "block" : "hidden"
+        }`}
+        onClick={toggleDrawer}
+      />
+
+      <div
+        className={`fixed left-0 top-0 h-full w-64 bg-white lg:hidden transition-transform ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
-        <ThemeProvider>
+        <Sidebar />
+      </div>
 
-          <DrawerProvider>
+      {/* Main area */}
+      <div className="flex flex-1 flex-col">
 
-            <AppShell>
-              {children}
-            </AppShell>
+        {/* Header */}
+        <Header toggleDrawer={toggleDrawer} />
 
-          </DrawerProvider>
+        {/* Page content (SERVER PAGES ZIPO HAPA) */}
+        <main className="flex-1 overflow-y-auto">
+          {children}
+        </main>
 
-        </ThemeProvider>
-      </body>
-    </html>
+      </div>
+    </div>
   );
 }
