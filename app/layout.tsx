@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ThemeMeta from "@/components/providers/ThemeMeta";
 
+  
 import {
   Geist,
   Geist_Mono,
@@ -47,7 +49,7 @@ export default function RootLayout({
         `}
       >
         <ThemeProvider>
-
+          <ThemeMeta />
           <DrawerProvider>
 
             <AppShell>
