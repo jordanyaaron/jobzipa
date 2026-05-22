@@ -17,7 +17,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
 
   return (
-    <header className="h-16 border-b border-theme lg:z-50 flex lg:fixed top-0 left-0 right-0 bg-white items-center px-4">
+    <header className="h-16 border-b border-theme lg:z-50 flex lg:fixed top-0 left-0 right-0 items-center px-4">
       
       <h1 className="text-2xl font-bold text-black ml-2">
         JobZipa
