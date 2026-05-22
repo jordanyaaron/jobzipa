@@ -1,7 +1,6 @@
 "use client";
 
 import Header from "@/components/headers/Header";
-import "./globals.css";
 import Sidebar from "@/components/sidebars/Sidebar";
 import {useDrawer} from "@/components/providers/DrawerProvider"
 
