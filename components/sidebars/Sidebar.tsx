@@ -64,8 +64,8 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
   };
 
   return (
-    <aside className="h-full w-64 p-4">
-      <div className="flex h-12 items-center border-b border-[var(--border)] pb-[10px] pl-2">
+    <aside className="h-full w-64 p-4  bg-[var(--background)] " >
+      <div className="flex h-12 items-center border-b border-theme pb-[10px] pl-2">
         {toggleDrawer && (
           <button
             onClick={handleClick}
@@ -97,9 +97,9 @@ const Sidebar = ({ toggleDrawer }: SidebarProps) => {
                   : "hover:bg-[var(--hover)]"
               }`}
             >
-              <Icon className="h-5 w-5 text-[var(--text)]" />
+              <Icon className="h-5 w-5 text-main" />
 
-              <span className="text-[var(--text)]">
+              <span className="text-main">
                 {link.name}
               </span>
             </Link>
