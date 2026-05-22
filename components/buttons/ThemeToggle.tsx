@@ -1,21 +1,3 @@
-// components/mode-toggle.tsx
-"use client"
-
-import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
-
-export function ModeToggle() {
-  
-
-  return (
-    <button 
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="p-2 bg-gray-200 dark:bg-gray-800 rounded-md"
-    >
-      Badili kwenda {resolvedTheme === "dark" ? "Mwanga" : "Giza"}
-    </button>
-  )
-}
 
 
 "use client";
