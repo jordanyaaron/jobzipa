@@ -29,7 +29,7 @@ export default function AppShell({
             hidden lg:block
             fixed top-0 left-0 bottom-0
             w-64 z-40
-            border-r
+            border-r border-theme
           "
         >
           <Sidebar />

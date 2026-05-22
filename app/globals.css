@@ -1,6 +1,94 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
+/* 🌞 LIGHT THEME */
 :root {
+  /* Base */
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  /* Surfaces */
+  --card: #f8fafc;
+  --muted: #f1f5f9;
+
+  /* Borders */
+  --border: #e2e8f0;
+
+  /* Text */
+  --text: #1e293b;
+  --text-muted: #64748b;
+
+  /* Brand (JobZipa primary) */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  /* Status */
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+/* 🌙 DARK THEME */
+.dark {
+  --background: #0b1220;
+  --foreground: #e2e8f0;
+
+  --card: #111827;
+  --muted: #1f2937;
+
+  --border: #263041;
+
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
+
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+
+  --success: #22c55e;
+  --warning: #fbbf24;
+  --danger: #f87171;
+}
+
+/* Base styling */
+body {
+  background: var(--background);
+  color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+@layer utilities {
+  .bg-card {
+    background: var(--card);
+  }
+
+  .bg-muted {
+    background: var(--muted);
+  }
+
+  .text-main {
+    color: var(--text);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .border-theme {
+    border-color: var(--border);
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: var(--primary-hover);
+  }
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +111,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
