@@ -1,8 +1,7 @@
 "use client";
 
-import Header from "@/components/header/Header";
-import Sidebar from "@/components/sidebar/Sidebar";
-import { useDrawer } from "@/components/providers/DrawerProvider";
+import Header from "@/components/headers/Header";
+import Sidebar from "@/components/sidebars/Sidebar";
 
 export default function AppShell({
   children,
