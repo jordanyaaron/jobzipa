@@ -1,47 +1,82 @@
 "use client";
 
 import Header from "@/components/headers/Header";
+
 import Sidebar from "@/components/sidebars/Sidebar";
+
+import { useDrawer } from "@/components/providers/DrawerProvider";
 
 export default function AppShell({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { open, toggleDrawer } = useDrawer();
+  const {
+    open,
+    toggleDrawer,
+    closeDrawer,
+  } = useDrawer();
 
   return (
-    <div className="flex h-screen">
+    <div className="min-h-screen">
 
-      {/* Sidebar (desktop) */}
-      <div className="hidden lg:block w-64 border-r">
-        <Sidebar />
-      </div>
+      {/* HEADER */}
+      <Header toggleDrawer={toggleDrawer} />
 
-      {/* Mobile sidebar */}
-      <div
-        className={`fixed inset-0 bg-black/40 lg:hidden ${
-          open ? "block" : "hidden"
-        }`}
-        onClick={toggleDrawer}
-      />
+      <div className="flex">
 
-      <div
-        className={`fixed left-0 top-0 h-full w-64 bg-white lg:hidden transition-transform ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <Sidebar />
-      </div>
+        {/* DESKTOP SIDEBAR */}
+        <aside
+          className="
+            hidden lg:block
+            fixed top-16 left-0 bottom-0
+            w-64
+            border-r
+          "
+        >
+          <Sidebar />
+        </aside>
 
-      {/* Main area */}
-      <div className="flex flex-1 flex-col">
+        {/* MOBILE OVERLAY */}
+        {open && (
+          <div
+            onClick={closeDrawer}
+            className="
+              fixed inset-0 z-40
+              bg-black/50
+              lg:hidden
+            "
+          />
+        )}
 
-        {/* Header */}
-        <Header toggleDrawer={toggleDrawer} />
+        {/* MOBILE DRAWER */}
+        <div
+          className={`
+            fixed top-0 left-0 z-50
+            h-full w-64
+            bg-white
+            transition-transform duration-300
+            lg:hidden
 
-        {/* Page content (SERVER PAGES ZIPO HAPA) */}
-        <main className="flex-1 overflow-y-auto">
+            ${
+              open
+                ? "translate-x-0"
+                : "-translate-x-full"
+            }
+          `}
+        >
+          <Sidebar toggleDrawer={toggleDrawer} />
+        </div>
+
+        {/* MAIN CONTENT */}
+        <main
+          className="
+            flex-1
+            pt-16
+            lg:ml-64
+            p-4
+          "
+        >
           {children}
         </main>
 
