@@ -56,6 +56,7 @@ export default function RootLayout({
         className={`
           ${geistSans.variable}
           ${geistMono.variable}
+          bg-(val(--background))
         `}
       >
         <ThemeProvider>
