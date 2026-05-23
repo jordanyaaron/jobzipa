@@ -10,23 +10,28 @@ export default function ThemeMeta() {
     const isDark = resolvedTheme === "dark";
     const color = isDark ? "#0b1220" : "#ffffff";
 
-    // 1. Normal theme-color
-    let meta = document.querySelector('meta[name="theme-color"]');
+    // 1. Update or create main theme-color meta
+    let meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement;
+
     if (!meta) {
-      meta = document.createElement("meta");
+      meta = document.createElement("meta") as HTMLMetaElement;
       meta.name = "theme-color";
       document.head.appendChild(meta);
     }
     meta.content = color;
 
-    // 2. Media query for dark mode (inasaidia bottom bar)
-    const darkMeta = document.createElement("meta");
-    darkMeta.name = "theme-color";
-    darkMeta.media = "(prefers-color-scheme: dark)";
-    darkMeta.content = "#0b1220";
-    document.head.appendChild(darkMeta);
+    // 2. Extra meta for better bottom bar support
+    let darkMeta = document.querySelector('meta[name="theme-color"][media*="dark"]') as HTMLMetaElement;
 
-    // 3. Force on html & body
+    if (!darkMeta) {
+      darkMeta = document.createElement("meta") as HTMLMetaElement;
+      darkMeta.name = "theme-color";
+      darkMeta.media = "(prefers-color-scheme: dark)";
+      document.head.appendChild(darkMeta);
+    }
+    darkMeta.content = "#0b1220";
+
+    // 3. Force background on root elements
     document.documentElement.style.backgroundColor = color;
     document.body.style.backgroundColor = color;
 
