@@ -3,9 +3,7 @@ import type { Metadata,
 import "./globals.css";
 import ThemeMeta from "@/components/providers/ThemeMeta";
 
-export const viewport: Viewport = {
-  themeColor: "#000",
-};
+
   
 import {
   Geist,
@@ -40,6 +38,7 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0b1220" }, // weka rangi ya dark mode yako hapa
   ],
+   manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -52,6 +51,12 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
+      <head>
+        <meta name="theme-color" content="#121212" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#121212" />
+      </head>
       <body
         className={`
           ${geistSans.variable}

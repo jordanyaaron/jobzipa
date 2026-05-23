@@ -1,0 +1,10 @@
+{
+  "name": "JobZipa",
+  "short_name": "App",
+  "theme_color": "#0b1220",
+  "background_color": "#0b1220",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [...],
+  "start_url": "/"
+}
