@@ -10,24 +10,25 @@ export default function ThemeMeta() {
     const isDark = resolvedTheme === "dark";
     const color = isDark ? "#0b1220" : "#ffffff";
 
-    // Status Bar
-    let metaTheme = document.querySelector('meta[name="theme-color"]');
-    if (!metaTheme) {
-      metaTheme = document.createElement("meta");
-      metaTheme.setAttribute("name", "theme-color");
-      document.head.appendChild(metaTheme);
+    // 1. Normal theme-color
+    let meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "theme-color";
+      document.head.appendChild(meta);
     }
-    metaTheme.setAttribute("content", color);
+    meta.content = color;
 
-    // Bottom Navigation Bar (Muhimu sana)
-    const metaNav = document.createElement("meta");
-    metaNav.setAttribute("name", "theme-color");
-    metaNav.setAttribute("media", "(prefers-color-scheme: dark)");
-    metaNav.setAttribute("content", isDark ? "#0b1220" : "#ffffff");
-    document.head.appendChild(metaNav);
+    // 2. Media query for dark mode (inasaidia bottom bar)
+    const darkMeta = document.createElement("meta");
+    darkMeta.name = "theme-color";
+    darkMeta.media = "(prefers-color-scheme: dark)";
+    darkMeta.content = "#0b1220";
+    document.head.appendChild(darkMeta);
 
-    // Extra for Android Navigation Bar
-    document.documentElement.style.setProperty('background-color', color, 'important');
+    // 3. Force on html & body
+    document.documentElement.style.backgroundColor = color;
+    document.body.style.backgroundColor = color;
 
   }, [resolvedTheme]);
 
