@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "Discover your next career opportunity with JobZipa. Explore thousands of job listings, connect with top companies, and take the next step in your professional journey.",
 
   
-  themeColor: #0b1220,
+  themeColor: "#0b1220",
    manifest: "/manifest.json",
    
   viewport: {
