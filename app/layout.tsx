@@ -1,5 +1,4 @@
-import type { Metadata,
-  Viewport } from "next";
+import type { Metadata,Viewport } from "next";
 import "./globals.css";
 import ThemeMeta from "@/components/providers/ThemeMeta";
 
@@ -51,17 +50,11 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
-      <head>
-        <meta name="theme-color" content="#121212" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#121212" />
-      </head>
       <body
         className={`
           ${geistSans.variable}
           ${geistMono.variable}
-          bg-(val(--background))
+          bg-background
         `}
       >
         <ThemeProvider>
