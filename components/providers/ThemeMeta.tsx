@@ -7,36 +7,28 @@ export default function ThemeMeta() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    const updateColor = () => {
-      const color = resolvedTheme === "dark" ? "#0b1220" : "#ffffff";
+    const isDark = resolvedTheme === "dark";
+    const color = isDark ? "#0b1220" : "#ffffff";
 
-      // Tafuta meta au itengeneze
-      let meta = document.querySelector('meta[name="theme-color"]');
-      
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute("name", "theme-color");
-        document.head.appendChild(meta);
-      }
+    // Status Bar
+    let metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (!metaTheme) {
+      metaTheme = document.createElement("meta");
+      metaTheme.setAttribute("name", "theme-color");
+      document.head.appendChild(metaTheme);
+    }
+    metaTheme.setAttribute("content", color);
 
-      meta.setAttribute("content", color);
+    // Bottom Navigation Bar (Muhimu sana)
+    const metaNav = document.createElement("meta");
+    metaNav.setAttribute("name", "theme-color");
+    metaNav.setAttribute("media", "(prefers-color-scheme: dark)");
+    metaNav.setAttribute("content", isDark ? "#0b1220" : "#ffffff");
+    document.head.appendChild(metaNav);
 
-      // Extra meta tags kwa nguvu zaidi
-      const appleMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-      if (appleMeta) {
-        appleMeta.setAttribute("content", resolvedTheme === "dark" ? "black" : "default");
-      }
-    };
+    // Extra for Android Navigation Bar
+    document.documentElement.style.setProperty('background-color', color, 'important');
 
-    // Run mara moja + baada ya delay
-    updateColor();
-    const timeout1 = setTimeout(updateColor, 300);
-    const timeout2 = setTimeout(updateColor, 800);
-
-    return () => {
-      clearTimeout(timeout1);
-      clearTimeout(timeout2);
-    };
   }, [resolvedTheme]);
 
   return null;
