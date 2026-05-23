@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#0b1220" }, // weka rangi ya dark mode yako hapa
   ],
    manifest: "/manifest.json",
+   // Ongeza hii
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
