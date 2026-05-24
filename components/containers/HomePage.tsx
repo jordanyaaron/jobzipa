@@ -12,7 +12,7 @@ export default function  HomePage() {
 
   
   return (
-        <div className="absolute  bottom-0 top-16 bg-[var(--main-bg)] px-4 md:px-6 flex-1 overflow-y-auto">
+        <div className="absolute w-full bottom-0 top-16 bg-[var(--main-bg)] px-4 md:px-6 flex-1 overflow-y-auto">
             <main className="w-full flex gap-10" >
             {
                 loading 
