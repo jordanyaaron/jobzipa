@@ -12,7 +12,6 @@ export default function  HomePage() {
 
   
   return (
-    <>
         <div className="pt-16 bg-[var(--main-bg)] px-4 md:px-6 flex-1 overflow-y-auto">
             <main className="w-fulll flex gap-10" >
             {
@@ -47,9 +46,8 @@ export default function  HomePage() {
                 </div>
             </aside>
             </main>
-        <div/>
-    </>
-  );
+        </div>
+    );
 };
 
 
