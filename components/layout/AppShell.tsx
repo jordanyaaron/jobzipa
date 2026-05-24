@@ -3,6 +3,7 @@
 import Header from "@/components/headers/Header";
 import Sidebar from "@/components/sidebars/Sidebar";
 import {useDrawer} from "@/components/providers/DrawerProvider"
+import { usePathname } from "next/navigation";
 
 export default function AppShell({
   children,
@@ -14,6 +15,10 @@ export default function AppShell({
     toggleDrawer,
     closeDrawer,
   } = useDrawer();
+  const pathname = usePathname();
+
+    const hideNavbar =
+      pathname === "/post" 
 
   return (
     <div className="min-h-screen">
@@ -24,16 +29,19 @@ export default function AppShell({
       <div className="flex">
 
         {/* DESKTOP SIDEBAR */}
-        <aside
-          className="
-            hidden lg:block
-            fixed top-0 left-0 bottom-0
-            w-64 z-40
-            border-r border-theme
-          "
-        >
-          <Sidebar />
-        </aside>
+        {!hideNavbar && 
+          <aside
+            className="
+              hidden lg:block
+              fixed top-0 left-0 bottom-0
+              w-64 z-40
+              border-r border-theme
+            "
+          >
+            <Sidebar />
+          </aside>
+        }
+          
 
         {/* MOBILE OVERLAY */}
         {open && (
@@ -68,12 +76,12 @@ export default function AppShell({
 
         {/* MAIN CONTENT */}
         <main
-          className="
+          className={`
             flex-1
             pt-16
-            lg:ml-64
             p-4
-          "
+            ${hideNavbar ? "lg:ml-0" : "lg:ml-64"}
+          `}
         >
           {children}
         </main>

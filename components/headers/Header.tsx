@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import {
   MagnifyingGlassIcon,
   FunnelIcon ,ArrowLeftIcon
@@ -38,6 +38,14 @@ export default function Header({ toggleDrawer }: HeaderProps) {
           />
         </div>
       </div>
+
+      <Link
+        to="/post"
+        className="flex items-center gap-2 px-4 py-2 rounded-lg text-white bg-green-600 hover:bg-green-700"
+      >
+        <PlusIcon className="h-5 w-5 text-white" />
+        Post
+      </Link>
 
       <button
           onClick={() => setMobileSearchOpen(true)}
