@@ -41,7 +41,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
       <Link
         href="/post"
-        className="flex items-center gap-2 px-4 py-2 rounded-lg text-white bg-green-600 hover:bg-green-700"
+        className="flex items-center gap-2 px-4 py-2 rounded-lg text-white bg-text-main hover:bg-green-700"
       >
         <PlusIcon className="h-5 w-5 text-white" />
         Post
