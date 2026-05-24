@@ -16,7 +16,7 @@ export default function  HomePage() {
             <main className="w-full flex gap-10" >
             {
                 loading 
-                    ?   <div className="p-2 lg:p-10 w-full lg:w-[560px] text-center text-gray-500">
+                    ?   <div className="p-0 lg:p-10 w-full lg:w-[560px] text-center text-gray-500">
                             <JobsSkeleton />
                         </div>
                 : 
