@@ -62,7 +62,7 @@ export default function RootLayout({
         className={`
           ${geistSans.variable}
           ${geistMono.variable}
-          bg-background
+          bg-background w-[100vw] overflow-x-hidden
         `}
       >
         <ThemeProvider>
