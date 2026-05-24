@@ -17,7 +17,7 @@ export default function  HomePage() {
             {
                 loading 
                     ?   <div className="p-0 lg:p-10 w-full lg:w-[560px] text-center text-gray-500">
-                            <JobsSkeleton />
+                            {/* <JobsSkeleton /> */}
                         </div>
                 : 
                 jobs.length === 0 
