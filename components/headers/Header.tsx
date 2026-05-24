@@ -2,7 +2,7 @@
 import Link from "next/link";
 import {
   MagnifyingGlassIcon,
-  FunnelIcon ,ArrowLeftIcon
+  FunnelIcon ,ArrowLeftIcon,PlusIcon
 } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
 
@@ -40,7 +40,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
       </div>
 
       <Link
-        to="/post"
+        href="/post"
         className="flex items-center gap-2 px-4 py-2 rounded-lg text-white bg-green-600 hover:bg-green-700"
       >
         <PlusIcon className="h-5 w-5 text-white" />
