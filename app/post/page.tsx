@@ -21,9 +21,9 @@ export default  function PostPage(){
             </button>
             
           </header>
-      <div className="w-full h-full gap-10" >
-        <div className="w-full h-full"></div>
-        <div className="w-full h-full"></div>
+      <div className="w-full flex flex-col gap-10" >
+        <div className="w-full h-100"></div>
+        <div className="w-full h-100"></div>
         <h1>Post Page</h1>
       </div>
     </>
