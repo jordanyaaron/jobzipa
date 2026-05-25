@@ -68,7 +68,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
             `
           }
       >
-          <ArrowUpTrayIcon className="h-6 w-6   text-main" />
+          <ArrowUpTrayIcon className="h-6 w-6   text-[var(--background)]" />
       </button>
 
       <button
