@@ -7,7 +7,7 @@ export default  function PostPage(){
 
   return (
     <>
-      <div className="w-fulll flex gap-10" >
+      <div className="w-full flex gap-10" >
         <h1>Post Page</h1>
       </div>
     </>

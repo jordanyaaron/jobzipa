@@ -19,28 +19,34 @@ export default function AppShell({
 
     const hideNavbar =
       pathname === "/post" 
+  
+  if(hideNavbar) {
+    return (
+        <main className="pt-16 p-4">
+          {children}
+        </main>
+    )
+  } 
 
   return (
     <div className="min-h-screen">
 
       {/* HEADER */}
       <Header toggleDrawer={toggleDrawer} />
-
       <div className="flex">
 
-        {/* DESKTOP SIDEBAR */}
-        {!hideNavbar && 
-          <aside
-            className="
-              hidden lg:block
-              fixed top-0 left-0 bottom-0
-              w-64 z-40
-              border-r border-theme
-            "
-          >
-            <Sidebar />
-          </aside>
-        }
+      {/* DESKTOP SIDEBAR */}
+        
+      <aside
+        className="
+          hidden lg:block
+          fixed top-0 left-0 bottom-0
+          w-64 z-40
+          border-r border-theme
+        "
+      >
+        <Sidebar />
+      </aside>
           
 
         {/* MOBILE OVERLAY */}
