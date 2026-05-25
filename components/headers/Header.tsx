@@ -2,9 +2,11 @@
 import Link from "next/link";
 import {
   MagnifyingGlassIcon,
-  FunnelIcon ,ArrowLeftIcon,PlusIcon
+  FunnelIcon ,ArrowLeftIcon,PlusIcon, ArrowUpTrayIcon
 } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
+
+import { usePathname } from "next/navigation";
 
 type HeaderProps = {
   toggleDrawer?: () => void;
@@ -14,6 +16,9 @@ export default function Header({ toggleDrawer }: HeaderProps) {
   const [query, setQuery] = useState("");
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const pathname = usePathname();
+  const hideThis =
+        pathname === "/post" 
 
 
   return (
@@ -41,7 +46,13 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
       <Link
         href="/post"
-        className="flex items-center gap-2 px-4 py-2 rounded-lg text-[var(--background)] bg-[var(--foreground)]  "
+        className={`
+            ${
+              hideThis ? "hidden" : ""
+            }
+            flex items-center gap-2 px-4 py-2 rounded-lg text-[var(--background)] bg-[var(--foreground)]
+          `
+      }
       >
         <PlusIcon className="h-5 w-5 text-[var(--background)] " />
         Post
@@ -49,14 +60,37 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
       <button
           onClick={() => setMobileSearchOpen(true)}
-          className="lg:hidden p-2 rounded-lg hover:bg-[var(--hover)]  text-main"
+          className={`
+              ${
+                hideThis ? "" : "hidden"
+              }
+              flex items-center gap-2 px-4 py-2 rounded-lg text-[var(--background)] bg-[var(--foreground)]
+            `
+          }
+      >
+          <ArrowUpTrayIcon className="h-6 w-6   text-main" />
+      </button>
+
+      <button
+          onClick={() => setMobileSearchOpen(true)}
+          className={`
+              ${
+                hideThis ? "hidden" : ""
+              }
+              lg:hidden p-2 rounded-lg hover:bg-[var(--hover)]  text-main
+            `
+          }
       >
           <MagnifyingGlassIcon className="h-6 w-6   text-main" />
       </button>
 
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="p-2 rounded-lg hover:bg-[var(--hover)]"
+        className={`
+          ${
+            hideThis ? "hidden" : ""
+          }
+          p-2 rounded-lg hover:bg-[var(--hover)]`}
         >
         <FunnelIcon className="h-6 w-6 text-main" />
       </button>
@@ -64,7 +98,13 @@ export default function Header({ toggleDrawer }: HeaderProps) {
       {/* Drawer button RIGHT SIDE */}
       <button
         onClick={toggleDrawer}
-        className="rounded-lg p-2 text-2xl text-main  hover:bg-gray-100 lg:hidden"
+        className={`
+            ${
+              hideThis ? "hidden" : ""
+            }
+            rounded-lg p-2 text-2xl text-main  hover:bg-gray-100 lg:hidden
+          `
+        }
       >
         ☰
       </button>
