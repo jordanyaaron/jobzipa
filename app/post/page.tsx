@@ -21,11 +21,14 @@ export default  function PostPage(){
             </button>
             
           </header>
-      <div className="w-full flex flex-col gap-10" >
-        <div className="w-full h-100"></div>
-        <div className="w-full h-100"></div>
-        <h1>Post Page</h1>
+      <div className="absolute right-0 left-0 bottom-0 top-16 overflow-y-auto" > 
+          <div className="w-full flex flex-col gap-10" >
+            <div className="w-full h-100"></div>
+            <div className="w-full h-100"></div>
+            <h1>Post Page</h1>
+          </div>
       </div>
+        
     </>
   );
 };
