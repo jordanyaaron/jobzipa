@@ -22,7 +22,7 @@ export default function AppShell({
   
   if(hideNavbar) {
     return (
-        <main className="pt-16 p-4">
+        <main className="min-h-screen">
           {children}
         </main>
     )

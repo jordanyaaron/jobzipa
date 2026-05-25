@@ -57,40 +57,16 @@ export default function Header({ toggleDrawer }: HeaderProps) {
         <PlusIcon className="h-5 w-5 text-[var(--background)] " />
         Post
       </Link>
-
       <button
           onClick={() => setMobileSearchOpen(true)}
-          className={`
-              ${
-                hideThis ? "" : "hidden"
-              }
-              flex items-center gap-2 px-4 py-2 rounded-lg text-[var(--background)] bg-[var(--foreground)]
-            `
-          }
-      >
-          <ArrowUpTrayIcon className="h-6 w-6   text-[var(--background)]" />
-      </button>
-
-      <button
-          onClick={() => setMobileSearchOpen(true)}
-          className={`
-              ${
-                hideThis ? "hidden" : ""
-              }
-              lg:hidden p-2 rounded-lg hover:bg-[var(--hover)]  text-main
-            `
-          }
+          className="lg:hidden p-2 rounded-lg hover:bg-[var(--hover)]  text-main"
       >
           <MagnifyingGlassIcon className="h-6 w-6   text-main" />
       </button>
 
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className={`
-          ${
-            hideThis ? "hidden" : ""
-          }
-          p-2 rounded-lg hover:bg-[var(--hover)]`}
+        className="p-2 rounded-lg hover:bg-[var(--hover)]"
         >
         <FunnelIcon className="h-6 w-6 text-main" />
       </button>
@@ -98,13 +74,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
       {/* Drawer button RIGHT SIDE */}
       <button
         onClick={toggleDrawer}
-        className={`
-            ${
-              hideThis ? "hidden" : ""
-            }
-            rounded-lg p-2 text-2xl text-main  hover:bg-gray-100 lg:hidden
-          `
-        }
+        className="rounded-lg p-2 text-2xl text-main  hover:bg-gray-100 lg:hidden"
       >
         ☰
       </button>
