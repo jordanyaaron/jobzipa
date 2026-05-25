@@ -13,8 +13,7 @@ export default  function PostPage(){
             <h1 className="text-2xl font-bold text-black text-main ml-2">
               JobZipa
             </h1>
-      
-            
+             <div className="flex-1" />
             <button
                 className="flex items-center gap-2 px-4 py-2 rounded-lg text-[var(--background)] bg-[var(--foreground)]"
             >
