@@ -104,7 +104,7 @@ export default  function PostPage(){
                                   w-[calc(100vw-37px)] lg:w-[590px]
                                   m-[10px] lg:m-[20px]
                                   my-5
-                                  ml-[10px] lg:ml-[37px]
+                                  lg:ml-[37px]
                                   flex
                                   flex-col
                                   justify-center

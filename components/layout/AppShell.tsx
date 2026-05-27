@@ -22,14 +22,14 @@ export default function AppShell({
   
   if(hideNavbar) {
     return (
-        <main className="min-h-screen">
+        <main className="min-full">
           {children}
         </main>
     )
   } 
 
   return (
-    <div className="min-h-screen">
+    <div className="min-full">
 
       {/* HEADER */}
       <Header toggleDrawer={toggleDrawer} />
