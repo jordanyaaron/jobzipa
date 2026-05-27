@@ -33,7 +33,7 @@ export default  function PostPage(){
 
   //  CANCEL CROPPING
     const handleRemoveLogo = () => {
-        setCroppedImage('');
+        setCroppedImage(null);
         setSelectedImage(null)
     };
 
