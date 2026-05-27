@@ -85,7 +85,7 @@ export default function AppShell({
           className={`
             flex-1
             pt-16
-            p-4 h-full
+            p-4 h-[100vh]
             ${hideNavbar ? "lg:ml-0" : "lg:ml-64"}
           `}
         >
