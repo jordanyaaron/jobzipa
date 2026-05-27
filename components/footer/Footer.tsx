@@ -5,11 +5,7 @@ export default function Footer() {
     <footer
       className="
         bg-[var(--main-bg)]
-        p-5
-        pt-[30px]
-        -mt-[2px]
-        -mb-5
-        h-[60px]
+        h-15 
         flex flex-col items-center justify-center
         text-center
       "

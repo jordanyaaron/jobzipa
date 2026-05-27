@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
 
 /* 🌞 LIGHT THEME */
 :root {
   /* Base */
   --background: #ffffff;
   --foreground: #0f172a;
+  --postground: #d7dadd;
 
   /* Surfaces */
   --card: #f8fafc;
@@ -32,7 +32,8 @@
 /* 🌙 DARK THEME */
 .dark {
   --background: #0b1220;
-  --foreground: #e2e8f0;
+  --foreground: #ffffff;
+  --postground: #000000;
 
   --card: #111827;
   --muted: #1f2937;
