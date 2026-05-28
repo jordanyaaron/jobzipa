@@ -86,7 +86,7 @@ export default  function PostPage(){
               >
                 
                 <div
-                  className="w-full mx-2 mb-2 pt-5"
+                  className="w-full  mb-2 pt-5"
                 >
                   <h1 className="
                     text-lg lg:text-2xl  font-bold text-main ml-1
