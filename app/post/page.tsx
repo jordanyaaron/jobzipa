@@ -95,14 +95,14 @@ export default  function PostPage(){
                   </h1>
                   {/* sections */}
                   {/* logo */}
-                  <div className=" mt-[20px] ">
+                  <div className=" mt-[20px] px-[8px] ">
                       {/* <h3>Organisation Logo</h3>*/}
                       {!imageSrc && !croppedImage  ? (
                           <button ref={logPickerRef}
                               className="
                                   h-[100px]  lg:h-[150px]
                                   w-[calc(100vw-50px)] lg:w-[590px]
-                                 mx-[17.5px] lg:m-[20px]
+                                 lg:m-[20px]
                                   my-5
                                   lg:ml-[37px]
                                   flex
