@@ -89,7 +89,7 @@ export default  function PostPage(){
                   className="w-full  mb-2 pt-5"
                 >
                   <h1 className="
-                    text-lg lg:text-2xl  font-bold text-main ml-1
+                    text-lg lg:text-2xl md:ml-30px   font-bold text-main ml-1
                   ">
                     Organisation Details
                   </h1>
@@ -222,21 +222,21 @@ export default  function PostPage(){
                 <div
                   className="w-full  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl   font-bold  text-main ml-2">
+                  <h1 className="text-lg lg:text-2xl md:ml-30px    font-bold  text-main ml-2">
                     Date Infos
                   </h1>
                 </div>
                 <div
                   className="w-full  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl   font-bold text-main ml-2">
+                  <h1 className="text-lg lg:text-2xl  md:ml-30px   font-bold text-main ml-2">
                     Date Infos
                   </h1>
                 </div>
                 <div
                   className="w-full  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl   font-bold text-main ml-2">
+                  <h1 className="text-lg lg:text-2xl md:ml-30px   font-bold text-main ml-2">
                     Aplication Link
                   </h1>
                 </div>
