@@ -81,7 +81,7 @@ export default  function PostPage(){
               <div
                 className="
                   w-full lg:w-[720px]
-                  px-2 lg:px-5 min-h-auto bg-[var(--background)]
+                  px-1 lg:px-2 min-h-auto bg-[var(--background)]
                 " 
               >
                 
@@ -89,7 +89,7 @@ export default  function PostPage(){
                   className="w-full mx-2 mb-2 pt-5"
                 >
                   <h1 className="
-                    text-lg lg:text-2xl  font-bold text-main ml-2
+                    text-lg lg:text-2xl  font-bold text-main ml-1
                   ">
                     Organisation Details
                   </h1>
@@ -102,7 +102,7 @@ export default  function PostPage(){
                               className="
                                   h-[100px]  lg:h-[150px]
                                   w-[calc(100vw-50px)] lg:w-[590px]
-                                 mx-[10px] lg:m-[20px]
+                                 mx-[17.5px] lg:m-[20px]
                                   my-5
                                   lg:ml-[37px]
                                   flex
