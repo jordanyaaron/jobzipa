@@ -70,7 +70,7 @@ export default  function PostPage(){
         </button>
         
       </header>
-      <main className="absolute right-0 left-0 bottom-0 top-16 overflow-y-auto" > 
+      <main className="mt-16 w-full h-auto" > 
           <div className="w-full flex flex-col " >
             <div 
               className="
