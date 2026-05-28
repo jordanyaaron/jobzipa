@@ -102,7 +102,7 @@ export default  function PostPage(){
                               className="
                                   h-[100px]  lg:h-[150px]
                                   w-full lg:w-[590px]
-                                 mx-20 lg:m-[20px]
+                                 mx-[10px] lg:m-[20px]
                                   my-5
                                   lg:ml-[37px]
                                   flex
