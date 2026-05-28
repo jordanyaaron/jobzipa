@@ -59,7 +59,7 @@ export default  function PostPage(){
     <>
       <header className="h-16 bg-[var(--background)]  border-b border-theme lg:z-50 flex fixed top-0 left-0 right-0 items-center px-4">
             
-        <h1 className="text-2xl font-bold text-black text-main ml-2">
+        <h1 className="text-2xl font-bold text-black text-main ml-1 md:ml-2">
           JobZipa
         </h1>
           <div className="flex-1" />
@@ -86,10 +86,10 @@ export default  function PostPage(){
               >
                 
                 <div
-                  className="w-full my-4  mb-2 pt-5"
+                  className="w-full my-6  mb-2 pt-2"
                 >
                   <h1 className="
-                    text-lg lg:text-2xl md:ml-30px   font-bold text-main 
+                    text-lg ml-2 lg:text-2xl md:ml-30px   font-bold text-main 
                   ">
                     Organisation Details
                   </h1>
@@ -212,28 +212,28 @@ export default  function PostPage(){
                   </div>
                 </div>
                 <div
-                  className="w-full my-4  mb-2"
+                  className="w-full my-6  mb-2"
                 >
                   <h1 className="text-lg ml-2 lg:text-2xl  font-bold  text-main ">
                     Job Details
                   </h1>
                 </div>
                 <div
-                  className="w-full my-4  mb-2"
+                  className="w-full my-6  mb-2"
                 >
                   <h1 className="text-lg ml-2 lg:text-2xl md:ml-30px    font-bold  text-main ">
                     Date Infos
                   </h1>
                 </div>
                 <div
-                  className="w-full my-4  mb-2"
+                  className="w-full my-6  mb-2"
                 >
                   <h1 className="text-lg ml-2 lg:text-2xl md:ml-30px    font-bold  text-main ">
                     Date Infos
                   </h1>
                 </div>
                 <div
-                  className="w-full my-4   mb-2"
+                  className="w-full my-6   mb-2"
                 >
                   <h1 className="text-lg ml-2 lg:text-2xl md:ml-30px   font-bold text-main ">
                     Aplications Link
