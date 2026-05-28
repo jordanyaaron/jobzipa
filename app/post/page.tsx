@@ -86,7 +86,7 @@ export default  function PostPage(){
               >
                 
                 <div
-                  className="w-full  mb-2 pt-5"
+                  className="w-full my-4  mb-2 pt-5"
                 >
                   <h1 className="
                     text-lg lg:text-2xl md:ml-30px   font-bold text-main 
@@ -95,7 +95,7 @@ export default  function PostPage(){
                   </h1>
                   {/* sections */}
                   {/* logo */}
-                  <div className=" mt-[7px] px-[8px] w-full flex items-center">
+                  <div className=" mt-[15px] px-[8px] w-full flex items-center">
                       {/* <h3>Organisation Logo</h3>*/}
                       {!imageSrc && !croppedImage  ? (
                           <button ref={logPickerRef}
@@ -212,31 +212,31 @@ export default  function PostPage(){
                   </div>
                 </div>
                 <div
-                  className="w-full  mb-2"
+                  className="w-full my-4  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl  font-bold  text-main ml-2">
+                  <h1 className="text-lg ml-2 lg:text-2xl  font-bold  text-main ">
                     Job Details
                   </h1>
                 </div>
                 <div
-                  className="w-full  mb-2"
+                  className="w-full my-4  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl md:ml-30px    font-bold  text-main ">
+                  <h1 className="text-lg ml-2 lg:text-2xl md:ml-30px    font-bold  text-main ">
                     Date Infos
                   </h1>
                 </div>
                 <div
-                  className="w-full  mb-2"
+                  className="w-full my-4  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl  md:ml-30px   font-bold text-main ">
+                  <h1 className="text-lg ml-2 lg:text-2xl md:ml-30px    font-bold  text-main ">
                     Date Infos
                   </h1>
                 </div>
                 <div
-                  className="w-full  mb-2"
+                  className="w-full my-4   mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl md:ml-30px   font-bold text-main ">
-                    Aplication Link
+                  <h1 className="text-lg ml-2 lg:text-2xl md:ml-30px   font-bold text-main ">
+                    Aplications Link
                   </h1>
                 </div>
               </div>
