@@ -213,28 +213,28 @@ export default  function PostPage(){
                   </div>
                 </div>
                 <div
-                  className="w-full mx-2 mb-2"
+                  className="w-full  mb-2"
                 >
                   <h1 className="text-lg lg:text-2xl  font-bold  text-main ml-2">
                     Job Details
                   </h1>
                 </div>
                 <div
-                  className="w-full mx-2 mb-2"
+                  className="w-full  mb-2"
                 >
                   <h1 className="text-lg lg:text-2xl   font-bold  text-main ml-2">
                     Date Infos
                   </h1>
                 </div>
                 <div
-                  className="w-full mx-2 mb-2"
+                  className="w-full  mb-2"
                 >
                   <h1 className="text-lg lg:text-2xl   font-bold text-main ml-2">
                     Date Infos
                   </h1>
                 </div>
                 <div
-                  className="w-full mx-2 mb-2"
+                  className="w-full  mb-2"
                 >
                   <h1 className="text-lg lg:text-2xl   font-bold text-main ml-2">
                     Aplication Link
