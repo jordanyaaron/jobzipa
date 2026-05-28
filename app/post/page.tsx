@@ -89,21 +89,20 @@ export default  function PostPage(){
                   className="w-full  mb-2 pt-5"
                 >
                   <h1 className="
-                    text-lg lg:text-2xl md:ml-30px   font-bold text-main ml-1
+                    text-lg lg:text-2xl md:ml-30px   font-bold text-main 
                   ">
                     Organisation Details
                   </h1>
                   {/* sections */}
                   {/* logo */}
-                  <div className=" mt-[20px] px-[8px] w-full flex items-center">
+                  <div className=" mt-[7px] px-[8px] w-full flex items-center">
                       {/* <h3>Organisation Logo</h3>*/}
                       {!imageSrc && !croppedImage  ? (
                           <button ref={logPickerRef}
                               className="
-                                  h-[100px]  lg:h-[150px]
-                                  w-[calc(100vw-20px)] lg:w-[590px]
+                                  h-[100px]  md:h-[150px]
+                                  w-[calc(100vw-20px)] md:w-[590px]
                                  lg:m-[20px]
-                                  my-5
                                   lg:ml-[37px]
                                   flex
                                   flex-col
@@ -222,21 +221,21 @@ export default  function PostPage(){
                 <div
                   className="w-full  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl md:ml-30px    font-bold  text-main ml-2">
+                  <h1 className="text-lg lg:text-2xl md:ml-30px    font-bold  text-main ">
                     Date Infos
                   </h1>
                 </div>
                 <div
                   className="w-full  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl  md:ml-30px   font-bold text-main ml-2">
+                  <h1 className="text-lg lg:text-2xl  md:ml-30px   font-bold text-main ">
                     Date Infos
                   </h1>
                 </div>
                 <div
                   className="w-full  mb-2"
                 >
-                  <h1 className="text-lg lg:text-2xl md:ml-30px   font-bold text-main ml-2">
+                  <h1 className="text-lg lg:text-2xl md:ml-30px   font-bold text-main ">
                     Aplication Link
                   </h1>
                 </div>
