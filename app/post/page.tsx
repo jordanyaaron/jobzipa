@@ -209,11 +209,11 @@ export default  function PostPage(){
                       
                       <input ref={fileInputRef} type="file" id="logoInput" className="hidden" accept="image/*"  onChange={handleFileChange}/>
                   </div>
-                  <div className=" mt-[15px] px-[8px] w-full flex items-center">
+                  <div className=" mt-[15px] px-[8px] w-full flex flex-col items-center">
                       <h3 className=' text-sm md:text-lg  lg:text-xl   font-black text-gray-800 dark:text-gray-200 h-auto'>Company Name</h3> 
                       <input ref={companyNameRef} type="text" placeholder="Company Name" 
                       className="
-                        w-full h-10 md:h-12 
+                        w-full min-h-10 md:min-h-12 
                         lg:h-14 border border-theme 
                         bg-gray-100 dark:bg-gray-700 
                         text-gray-800 dark:text-gray-300 
@@ -222,6 +222,10 @@ export default  function PostPage(){
                         rounded-md  bg-transparent
                         px-3 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
+                  </div>
+                  <div className=" mt-[15px] px-[8px] w-full flex flex-col items-center">
+                      <h3 className=' text-sm md:text-lg  lg:text-xl   font-black text-gray-800 dark:text-gray-200 h-auto'>Company Biography</h3> 
+                      
                   </div>
                 </div>
                 <div
