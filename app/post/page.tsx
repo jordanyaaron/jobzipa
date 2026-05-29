@@ -57,9 +57,9 @@ export default  function PostPage(){
 
   return (
     <>
-      <header className="h-16 bg-[var(--background)]  border-b border-theme lg:z-50 flex fixed top-0 left-0 right-0 items-center px-4">
+      <header className="h-16 bg-[var(--background)]  border-b border-theme lg:z-50 flex fixed top-0 left-0 right-0 items-center px-2 md:px-4 lg:px-6">
             
-        <h1 className="text-2xl font-bold text-black text-main ml-1 md:ml-2">
+        <h1 className="text-2xl font-bold text-black text-main  md:ml-2">
           JobZipa
         </h1>
           <div className="flex-1" />
@@ -210,7 +210,18 @@ export default  function PostPage(){
                       <input ref={fileInputRef} type="file" id="logoInput" className="hidden" accept="image/*"  onChange={handleFileChange}/>
                   </div>
                   <div className=" mt-[15px] px-[8px] w-full flex items-center">
-                      <input ref={companyNameRef} type="text" placeholder="Company Name" className="w-full h-10 md:h-12 lg:h-14 border border-theme bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 placeholder:text-gray-500 dark:placeholder:text-gray-400 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+                      <h3 className=' text-sm md:text-lg  lg:text-xl   font-black text-gray-800 dark:text-gray-200 h-auto'>Company Name</h3> 
+                      <input ref={companyNameRef} type="text" placeholder="Company Name" 
+                      className="
+                        w-full h-10 md:h-12 
+                        lg:h-14 border border-theme 
+                        bg-gray-100 dark:bg-gray-700 
+                        text-gray-800 dark:text-gray-300 
+                        placeholder:text-gray-500 
+                        dark:placeholder:text-gray-400 
+                        rounded-md  bg-transparent
+                        px-3 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
                   </div>
                 </div>
                 <div
