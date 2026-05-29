@@ -89,6 +89,35 @@ body {
   }
 }
 
+
+/* QUILL DARK MODE */
+
+.dark .ql-toolbar {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.dark .ql-container {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.dark .ql-editor {
+  color: var(--text);
+}
+
+.dark .ql-picker {
+  color: var(--text);
+}
+
+.dark .ql-stroke {
+  stroke: var(--text);
+}
+
+.dark .ql-fill {
+  fill: var(--text);
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

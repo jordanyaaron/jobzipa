@@ -2,9 +2,10 @@
 import Footer from "@/components/footer/Footer"
 import { useEffect, useState , useRef } from "react";
 import { XMarkIcon , PlusIcon , PencilIcon , ArrowUpTrayIcon } from '@heroicons/react/24/outline';
-    
+import TextEditor from "@/components/editor/TextEditor";
 
 export default  function PostPage(){
+  const [description, setDescription] = useState("");
   const [imageSrc, setImageSrc] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
@@ -225,7 +226,10 @@ export default  function PostPage(){
                   </div>
                   <div className=" mt-[30px] px-[8px] w-full flex flex-col items-start">
                       <h3 className=' text-sm md:text-lg mb-2  lg:text-xl   font-black text-gray-800 dark:text-gray-200 h-auto'>Company Biography</h3> 
-                      
+                      <TextEditor
+                        value={description}
+                        onChange={setDescription}
+                      />
                   </div>
                 </div>
                 <div
