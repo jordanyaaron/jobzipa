@@ -93,12 +93,12 @@ body {
 /* QUILL DARK MODE */
 
 .dark .ql-toolbar {
-  background: var(--card);
+  background: var(--background);
   border-color: var(--border);
 }
 
 .dark .ql-container {
-  background: var(--card);
+  background: var(--background);
   border-color: var(--border);
 }
 

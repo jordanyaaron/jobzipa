@@ -40,9 +40,6 @@ export default function TextEditor({
       className="
         overflow-hidden
         rounded-xl
-        border
-        border-theme
-        bg-card
       "
     >
       <ReactQuill
