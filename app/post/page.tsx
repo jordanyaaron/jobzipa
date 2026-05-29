@@ -102,7 +102,7 @@ export default  function PostPage(){
                               className="
                                   h-[100px]  md:h-[150px]
                                   w-[calc(100vw-20px)] md:w-[590px]
-                                 lg:m-[20px]
+                                  lg:m-[20px]
                                   lg:ml-[37px]
                                   flex
                                   flex-col
@@ -113,7 +113,6 @@ export default  function PostPage(){
                                   rounded-[20px] md:rounded-[30px]
                                   cursor-pointer
                                   border-0
-                                  
                                   bg-gradient-to-r from-zinc-900 to-zinc-700
                                   text-white shadow-md
                                   transition-all duration-300
@@ -209,6 +208,9 @@ export default  function PostPage(){
                       
                       
                       <input ref={fileInputRef} type="file" id="logoInput" className="hidden" accept="image/*"  onChange={handleFileChange}/>
+                  </div>
+                  <div className=" mt-[15px] px-[8px] w-full flex items-center">
+                      <input ref={companyNameRef} type="text" placeholder="Company Name" className="w-full h-10 md:h-12 lg:h-14 border border-theme bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 placeholder:text-gray-500 dark:placeholder:text-gray-400 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
                   </div>
                 </div>
                 <div
