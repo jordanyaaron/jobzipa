@@ -39,7 +39,7 @@ export default function TextEditor({
     <div
       className="
         overflow-hidden
-        rounded-xl
+        rounded-xl border-theme
       "
     >
       <ReactQuill
@@ -47,8 +47,15 @@ export default function TextEditor({
         value={value}
         onChange={onChange}
         modules={modules}
-        className="text-main"
+        className="
+          text-main
+          [&_.ql-toolbar]:border-0 
+          [&_.ql-toolbar]:border-b 
+          [&_.ql-toolbar]:border-theme
+          [&_.ql-container]:border-0
+        "
       />
     </div>
   );
 }
+
