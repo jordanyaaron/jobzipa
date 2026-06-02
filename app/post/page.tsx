@@ -211,7 +211,7 @@ export default  function PostPage(){
                       <input ref={fileInputRef} type="file" id="logoInput" className="hidden" accept="image/*"  onChange={handleFileChange}/>
                   </div>
                   <div className=" mt-[30px] px-[8px] w-full flex flex-col items-start">
-                      <h3 className=' text-sm md:text-lg  lg:text-xl   font-black text-gray-800 dark:text-gray-200 h-auto'>Company Name</h3> 
+                      <h3 className=' text-sm md:text-lg  lg:text-xl   font-black text-main  h-auto'>Company Name</h3> 
                       <input ref={companyNameRef} type="text" placeholder="Company Name" 
                       className="
                         w-full min-h-10 md:min-h-12 
@@ -225,7 +225,7 @@ export default  function PostPage(){
                       />
                   </div>
                   <div className=" mt-[30px] px-[8px] w-full flex flex-col items-start">
-                      <h3 className=' text-sm md:text-lg mb-2  lg:text-xl   font-black text-gray-800 dark:text-gray-200 h-auto'>Company Biography</h3> 
+                      <h3 className=' text-sm md:text-lg mb-2  lg:text-xl   font-black text-main  h-auto'>Company Biography</h3> 
                       <TextEditor
                         value={description}
                         onChange={setDescription}
